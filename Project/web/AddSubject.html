@@ -1,0 +1,70 @@
+<html >
+<head>
+    <script>
+            function check() {
+                document.getElementById("currencies").value = document.getElementById("ab").value;
+            }
+        </script>
+<style type="text/css">
+.k1{
+font-family: Cursive;
+color: white;}
+
+
+</style>
+    <title>Enrollment</title> 
+	 <link href="Home.css" rel="stylesheet">
+</head>
+<body >
+
+ <ul>
+  <li style="float:right"><a  href="index.html">LogOut</a></li>
+  <li style="float:right"><a href="Administrator.html">Administrator</a></li>
+  <li style="float:right"><a href="Security.jsp">Security</a></li>
+  <li style="float:right"><a class="active"  href="">Faculty Management</a>
+   <ul>
+      <li><a href="AddFaculty.html">Add Faculty</a></li>
+      <li><a href="AddSubject.html">Add Subject</a></li>
+      <li><a href="Registration.html">Registration </a></li>
+    </ul>
+  </li>
+  <li style="float:right"><a   href="Enrollment.html">Enrollment</a></li>
+  <li style="float:right"><a  href="home.html">Home</a></li>
+</ul> 
+<center>
+    <form method="post" action="AddSubject.jsp" >
+        <br>
+        <br>
+        <h2 style="color:whitesmoke ">
+         <div class="wrapper">
+          <div class="wrapper">
+            <div class="option">
+                <a style="color:white;">Faculty:&nbsp;&nbsp;&nbsp;</a>
+                <select id="ab" onChange="check();">
+                     <option style="display:none;"></option>
+                    <option value="AG">Agriculture</option>
+                    <option value="CSE">CSE</option>
+                    <option value="BAM">BBA</option>
+                    <option value="FISH">Fisheries</option>
+                    <option value="NFS">NFS</option>
+                    <option value="DVM">DVM</option>
+                    <option value="AH">AH</option>
+                    <option value="LM">Land Managment</option>
+                </select>
+              <input type="hidden" id="currencies" name="currencies"/>
+            </div>
+
+        </div>
+             
+         </div><br>
+        Course Code:<input type="text" name="Course_Code"><br><br>
+            Course Title:<input type="text" name="Course_Title"><br><br>
+            Credit Hours:<input type="text" name="Credit_Hours"><br><br>
+            <input type="submit" value="OK"/>
+        </h2>
+    </form>
+   
+</center>
+</body>
+
+</html >

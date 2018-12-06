@@ -1,0 +1,118 @@
+<html>
+
+    <head>
+        <title>Teacher Login</title>
+        <style>
+            body {
+                font-family: "Open Sans", sans-serif;
+                height: 110vh;
+                background: rgba(4, 40, 68, 0.85);
+                background-size: cover;
+            }
+
+            .wrapper {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                padding: 18px;
+            }
+            #banner {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                width: 100%;
+                height: 98px;
+                z-index: -1;
+            }.k1{
+                font-family: "Open Sans", sans-serif;
+                color: aqua;}
+
+            div.wrapper {
+
+                width: 100%;
+
+                display: table;
+                height: 8px;
+                font-family: Cursive; 
+            }
+            div.option {
+                text-align:center;
+                display: table-cell;
+                font-family: Cursive;  
+                font-size: 20px;
+            }
+            select{ margin: 10px;
+                    padding: 10px; 
+                    border: 2px solid purple; 
+                    width: 130px;
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    border-radius: 5px;
+
+            }
+
+
+        </style>
+        <script>
+            function check() {
+                document.getElementById("currencies").value = document.getElementById("ab").value;
+            }
+        </script>
+    </head>
+    <body>
+        <img id="banner" src="logo1.jpg" alt="Banner Image"/>
+
+        &nbsp;
+        <h5 class="" align="right">Developed by CSE PSTU</h5>
+        <div class="wrapper">
+            <h3 class="k1" align="center">Teacher's Login</h3>
+        </div>
+<form method="POST" action="TeacherLogin.jsp" class="login">
+        <div class="wrapper">
+            <div class="option">
+                <a style="color:white;">Faculty:&nbsp;&nbsp;&nbsp;</a>
+                <select id="ab" onChange="check();">
+                    <option value="AG">Agriculture</option>
+                    <option value="CSE">CSE</option>
+                    <option value="BAM">BBA</option>
+                    <option value="FISH">Fisheries</option>
+                    <option value="NFS">NFS</option>
+                    <option value="DVM">DVM</option>
+                    <option value="AH">AH</option>
+                    <option value="LM">Land Managment</option>
+                </select>
+              <input type="hidden" id="currencies" name="currencies"/>
+            </div>
+
+        </div>
+        
+            <div class="wrapper">
+                <div class="option">
+                    <a style="color:white;">Course Code:&nbsp;&nbsp;&nbsp;</a>
+                    <input type="text" name="Course_Code"   size="10" >
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="option">
+                    <a style="color:white;">Password;&nbsp;</a>
+
+                    <input type="password" name="Password"  size="20" >
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <div class="option">
+                    <input  style="color:#333; background-color:#4CAF50;"  type="submit" value="Login">
+                </div>
+
+
+            </div>
+
+        </form>
+        <h2 align="center">  Sorry,please enter correct information  </h2>                   
+
+    </body>
+</html>

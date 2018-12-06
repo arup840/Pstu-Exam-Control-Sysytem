@@ -1,0 +1,51 @@
+<html >
+<head>
+  
+<style type="text/css">
+.k1{
+font-family: Cursive;
+color: white;}
+
+ ul {list-style: none;padding: 0px;margin: 0px;}
+  ul li {display: block;position:auto;float: left;border:0px solid #000}
+  li ul {display: none;
+ }
+  ul li a {display: block;padding: 21px 20px 17px 23px;text-decoration: none;
+           white-space: nowrap;color: #fff;}
+  ul li a:hover {background: #88BC6E;}
+  li:hover ul {display: block; position: absolute;}
+  li:hover li {float:none;}
+  li:hover a {background: #88BC6E;}
+  li:hover li a:hover {background: #319A9C;}
+  #drop-nav li ul li {border-top: 0px}
+</style>
+    <title>Enrollment</title> 
+	 <link href="Home.css" rel="stylesheet">
+</head>
+<body >
+<ul>
+  <li style="float:right"><a  href="index.html">LogOut</a></li>
+  <li style="float:right"><a href="Administrator.html">Administrator</a></li>
+  <li style="float:right"><a href="Security.jsp">Security</a></li>
+  <li style="float:right"><a class="active"  href="">Faculty Management</a>
+   <ul>
+      <li><a href="AddFaculty.html">Add Faculty</a></li>
+      <li><a href="AddSubject.html">Add Subject</a></li>
+      <li><a href="Registration.html">Registration </a></li>
+    </ul>
+  </li>
+  <li style="float:right"><a   href="Enrollment.html">Enrollment</a></li>
+  <li style="float:right"><a  href="home.html">Home</a></li>
+</ul> 
+<center>
+    <form method="post" action="AddFaculty.jsp" >
+        <br>
+        <br>
+        <h2 style="color:whitesmoke "> Faculty Name<input type="text" name="fname">:
+            <input type="submit" value="OK"/></h2>
+    </form>
+   
+</center>
+</body>
+
+</html >

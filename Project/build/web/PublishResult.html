@@ -1,0 +1,133 @@
+<html >
+<head>
+
+<style type="text/css">
+
+div.wrapper {
+    
+    width: 100%;
+	
+    display: table;
+	height: 50px;
+	font-family: Cursive; 
+}
+div.option {
+    text-align:center;
+    display: table-cell;
+	font-family: Cursive;  
+  font-size: 25px;
+}
+ select{ margin: 10px;
+  padding: 10px; 
+  border: 2px solid purple; 
+  width: 150px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  
+}
+ <option style="display:none;"></option>
+</style>
+    <title>View Status</title> 
+	
+	 <link href="Home.css" rel="stylesheet">
+         <script>
+         function check() {
+                document.getElementById("a").value = document.getElementById("ab").value;
+                document.getElementById("b").value = document.getElementById("facul").value;
+                document.getElementById("ses").value = document.getElementById("session").value;
+            }
+            
+           // function show(){
+                //var x=document.getElementById("ab").value;
+               // document.getElementById("currencies").value=x;
+            //}
+                    </script>
+</head>
+<body >
+
+<ul>
+ <li style="float:right"><a  href="index.html">LogOut</a></li>
+  <li style="float:right"><a  class="active" href="Administrator.html">Administrator</a></li>
+  <li style="float:right"><a href="Security.jsp">Security</a></li>
+   <li style="float:right"><a href="">Faculty Management</a>
+   <ul>
+      <li><a href="AddFaculty.html">Add Faculty</a></li>
+      <li><a href="AddSubject.html">Add Subject</a></li>
+      <li><a href="Registration.html">Registration </a></li>
+    </ul>
+  </li>
+  <li style="float:right"><a  href="Enrollment.html">Enrollment</a></li>
+  <li style="float:right"><a  class="" href="home.html">Home</a></li>
+</ul> 
+<br>
+<br>
+
+<h2 style="color:Aqua;" align="center">Please Give These information to Publish Result</h2>
+<form action =PublishResult.jsp method="post">
+  <div class="wrapper">
+        <div class="option">
+		<a style="color:white;">Select Faculty:&nbsp;&nbsp;&nbsp;</a>
+            <select id="facul" onChange="check();">
+                 <option style="display:none;"></option>
+                <option value="AG">Agriculture</option>
+                <option value="Computer Science & Engineering">CSE</option>
+                <option value="BAM">BBA</option>
+                <option value="FISH">Fisheries</option>
+                <option value="NFS">NFS</option>
+                <option value="DVM">DVM</option>
+		<option value="AH">AH</option>
+                <option value="LM">Land Management</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="option">
+		<a style="color:white;">Select Semester:</a>
+            <select id="ab" onChange="check();">
+                <option style="display:none;"></option>
+                <option value="S1">1st Semester</option>
+                <option value="S2">2nd Semester</option>
+                <option value="S3">3rd Semester</option>
+                <option value="S4">4th Semester</option>
+                <option value="S5">5th Semester</option>
+                <option value="S6">6th Semester</option>
+		<option value="S7">7th Semester</option>
+                <option value="S8">8th Semester</option>
+            </select>
+        </div>
+  </div>
+
+       <div class="wrapper">
+        <div class="option">
+            <a style="color:white;">Select Session:</a>
+            <select id="session" onChange="check();">
+                <option style="display:none;"></option>
+                <option value="2010-2011">2010-2011</option>
+                <option value="2011-2012">2011-2012</option>
+                <option value="2012-2013">2012-2013</option>
+                <option value="2013-2014">2013-2014</option>
+                <option value="2014-2015">2014-2015</option>
+                <option value="2015-2016">2015-2016</option>
+		<option value="2016-2017">2016-2017</option>
+                <option value="2017-2018">2017-2018</option>
+            </select>
+            
+        </div>
+  </div>
+        <input type="hidden" id="a" name="semester" />
+    <input type="hidden" id="b" name="faculty" />
+       <input type="hidden" id="ses" name="session" />
+    
+    <div class="wrapper">
+        <div class="option">
+            <input  style="color:#333;background-color:#4CAF50;"  type="submit" value="Show">
+        </div>
+    </div>
+
+ </form>
+
+</body>
+
+</html >

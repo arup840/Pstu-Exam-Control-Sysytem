@@ -1,0 +1,82 @@
+<html >
+<head>
+    <script>
+             function check() {
+            document.getElementById("a").value = document.getElementById("ab").value;
+            document.getElementById("b").value = document.getElementById("type").value;
+        }
+
+    </script>
+<style type="text/css">
+.k1{
+font-family: Cursive;
+color: white;}
+
+</style>
+    <title>Enrollment</title> 
+	 <link href="Home.css" rel="stylesheet">
+</head>
+<body >
+
+ <ul>
+  <li style="float:right"><a  href="index.html">LogOut</a></li>
+  <li style="float:right"><a href="Administrator.html">Administrator</a></li>
+  <li style="float:right"><a href="Security.jsp">Security</a></li>
+  <li style="float:right"><a href="">Faculty Management</a>
+   <ul>
+      <li><a href="AddFaculty.html">Add Faculty</a></li>
+      <li><a href="AddSubject.html">Add Subject</a></li>
+      <li><a href="Registration.html">Registration </a></li>
+    </ul>
+  </li>
+  <li style="float:right"><a  class="active"  href="Enrollment.html">Enrollment</a></li>
+  <li style="float:right"><a  href="home.html">Home</a></li>
+</ul> 
+<center>
+     
+   <form method="post" action="checkbox.jsp" >
+      
+      <br>
+       <br> 
+         <h3>
+           
+<a style="color:white;">Registration No:</a> <input type="text" name="Registration" size="10" >
+		<a style="color:white;">Select Semester:</a>
+            <select id="ab" onChange="check();" name="Semester">
+                 <option style="display:none;"></option>
+                <option value="11">1st Semester</option>
+                <option value="12">2nd Semester</option>
+                <option value="21">3rd Semester</option>
+                <option value="22">4th Semester</option>
+                <option value="31">5th Semester</option>
+                <option value="32">6th Semester</option>
+		<option value="41">7th Semester</option>
+                <option value="42">8th Semester</option>
+            </select>
+
+    <input type="hidden" id="a" name="currencies" />
+    
+    <select id="type" onchange="check()">
+                 <option style="display:none;"></option>
+                <option>Regular</option>
+                <option>Irregular</option>
+               
+            </select>
+           
+		 <input type="hidden" id="b" name="type" />	
+                        <input type="submit" value="show"/>
+  </h3>
+       
+	 </form>
+    
+<form action="Enrollment" method="post" enctype="multipart/form-data">
+   
+        File: <input type="file" name="file" />
+        <input type="submit" value="Ok" />
+        <input type="hidden"  name="sub"  value="<%out.print(str);%>">
+</form> 
+</center>
+
+</body>
+
+</html >

@@ -1,0 +1,67 @@
+    
+ul {list-style: none;padding: 0px;margin: 0px;}
+  ul li {display: block;position:auto;float: left;border:0px solid #000}
+  li ul {display: none;
+ }
+  ul li a {display: block;padding: 21px 20px 17px 23px;text-decoration: none;
+           white-space: nowrap;color: #fff;}
+  ul li a:hover {background: #88BC6E;}
+  li:hover ul {display: block; position: absolute;}
+  li:hover li {float:none;}
+  li:hover a {background: #88BC6E;}
+  li:hover li a:hover {background: #319A9C;}
+  #drop-nav li ul li {border-top: 0px}
+ 
+{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+.active {
+    background-color: #4CAF50;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+.button {
+ background-color: #4CAF50;
+   
+   font-family: "Open Sans", sans-serif;
+    padding: 8px 24px;
+	 align-items: center;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	border-radius: 8px;
+	 -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    color: white;
+    border: 2px solid #008CBA;
+}
+.button:hover {
+    background-color: white; /* Green */
+    color: black;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: gray;
+}  body {
+	
+  height: 100vh;
+   background: url("back4.jpg") 20% fixed;
+  background-size: cover;
+}

@@ -1,0 +1,105 @@
+<html >
+<head>
+
+<style type="text/css">
+
+div.wrapper {
+    
+    width: 100%;
+	
+    display: table;
+	height: 50px;
+	font-family: Cursive; 
+}
+div.option {
+    text-align:center;
+    display: table-cell;
+	font-family: Cursive;  
+  font-size: 25px;
+}
+ select{ margin: 10px;
+  padding: 10px; 
+  border: 2px solid purple; 
+  width: 150px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  
+}
+
+</style>
+    <title>View Status</title> 
+	
+	 <link href="Home.css" rel="stylesheet">
+         <script>
+         function check() {
+                document.getElementById("currencies").value = document.getElementById("ab").value;
+            }
+                    </script>
+</head>
+<body >
+
+ <ul>
+  <li style="float:right"><a  href="index.html">LogOut</a></li>
+  <li style="float:right"><a class="active" href="Administrator.html">Administrator</a></li>
+  <li style="float:right"><a href="Security.jsp">Security</a></li>
+  <li style="float:right"><a href="">Faculty Management</a>
+   <ul>
+      <li><a href="AddFaculty.html">Add Faculty</a></li>
+      <li><a href="AddSubject.html">Add Subject</a></li>
+      <li><a href="Registration.html">Registration </a></li>
+    </ul>
+  </li>
+  <li style="float:right"><a   href="Enrollment.html">Enrollment</a></li>
+  <li style="float:right"><a  href="home.html">Home</a></li>
+</ul> 
+<br>
+<br>
+
+<br>
+
+<h2 style="color:Aqua;" align="center">Please Give These Information to Create Admit Card</h2>
+<form action =FinalTranscript.jsp method="post">
+   <div class="wrapper">
+            <div class="option">
+                <a style="color:white;">Faculty:&nbsp;&nbsp;&nbsp;</a>
+                <select id="ab" onChange="check();">
+                     <option style="display:none;"></option>
+                    <option value="AG">Agriculture</option>
+                    <option value="CSE">CSE</option>
+                    <option value="BAM">BBA</option>
+                    <option value="FISH">Fisheries</option>
+                    <option value="NFS">NFS</option>
+                    <option value="DVM">DVM</option>
+                    <option value="AH">AH</option>
+                    <option value="LM">Land Managment</option>
+                </select>
+              <input type="hidden" id="currencies" name="currencies"/>
+            </div>
+
+        </div>
+
+    <input type="hidden" id="a" name="faculty" />
+      <div class="wrapper">
+        <div class="option">
+            <a style="color:white;">Session:</a><input type="text" name="session">
+            
+        </div>
+  </div>
+       <div class="wrapper">
+        <div class="option">
+            <a style="color:white;">Enter Id:</a><input type="text" name="id">
+            
+        </div>
+  </div>
+	<div class="wrapper">
+        <div class="option">
+  <input  style="color:#333;background-color:#4CAF50;"  type="submit" value="Show">
+    </div>
+  </div>
+
+ </form>
+
+</body>
+
+</html >
